@@ -42,7 +42,7 @@ public class LevelGenerator : MonoBehaviour
     void PickNewPlatform()
     {
         currentYPos += Random.Range(0.6f, 1f);
-        float xPos = Random.Range(-3.8f, 3.8f);
+        float xPos = Random.Range(-3.5f, 3.5f);
 
         int r = 0;
         do

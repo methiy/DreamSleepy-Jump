@@ -26,7 +26,6 @@ public class CameraFollow : MonoBehaviour
     void LateUpdate(){
         float targetPosY = target.transform.position.y;
         float camPosY = transform.position.y;
-        Debug.Log(targetPosY - camPosY + " " + colliderHeight/2 );
         if(targetPosY + colliderHeight/2 <= camPosY){
             state = States.Falling;
         }
@@ -35,7 +34,6 @@ public class CameraFollow : MonoBehaviour
         }else if(state != States.Falling){
             state = States.Normal;
         }
-
         if(state == States.Uping){
             FollowDoodler(0.3f, 0f);
         }else if(state == States.Falling){
