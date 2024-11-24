@@ -290,7 +290,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1775839998}
-  smoothSpeed: 0.3
+  state: 0
+  colliderHeight: 7
 --- !u!50 &519420035
 Rigidbody2D:
   serializedVersion: 4
@@ -654,10 +655,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  mainCamera: {fileID: 519420028}
-  colliderHeight: 11
-  fallTime: 0.05
-  isFall: 0
 --- !u!1001 &2051489149808880330
 PrefabInstance:
   m_ObjectHideFlags: 0
