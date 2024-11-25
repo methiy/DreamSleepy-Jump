@@ -7,6 +7,7 @@ public class Platform : MonoBehaviour
     public PlatformType platformType;
     public float bounceSpeed = 4f;
 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.contacts[0].normal == Vector2.down)

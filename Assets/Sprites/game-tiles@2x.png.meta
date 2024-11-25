@@ -159,7 +159,7 @@ TextureImporter:
         width: 114
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -255,6 +255,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: boom
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 570
+        width: 79
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02276c94857124246ada359797265561
+      internalID: -807854241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rocket
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 423
+        width: 51
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a8af2cd555935489c62ab03dfc4faf
+      internalID: 1511532416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -266,11 +308,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      boom: -807854241
       game-tiles@2x_0: 1834559386802486852
       game-tiles@2x_1: 7351448428316234756
       game-tiles@2x_2: 4513640285406936665
       game-tiles@2x_3: -9200627550055919254
       game-tiles@2x_4: 4716490540992098087
+      rocket: 1511532416
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
