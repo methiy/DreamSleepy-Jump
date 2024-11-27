@@ -1045,6 +1045,7 @@ MonoBehaviour:
   platformPrefabs:
   - {fileID: 2051489149814828132, guid: 8d3666910643a1f4092df88fcfaec9ab, type: 3}
   - {fileID: 7346041056706990858, guid: 29213674638717246a4236d91da76f74, type: 3}
+  - {fileID: 5825192605730440538, guid: 6f8b51e1a31fe2141ba6d54d86c1948a, type: 3}
   propsPrefabs:
   - {fileID: 9161825169436527364, guid: 239840aa7d4683b4695842b11e0d992b, type: 3}
   - {fileID: 7674484777231878865, guid: f0fbef53cbae6064b8d188ac92724655, type: 3}

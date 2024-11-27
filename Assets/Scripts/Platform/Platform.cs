@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public enum PlatformType
+{
+    normal, weak, move
+}
 
 public class Platform : MonoBehaviour
 {
     public PlatformType platformType;
     public float bounceSpeed = 4f;
 
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private  void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.contacts[0].normal == Vector2.down)
         {
@@ -47,9 +50,4 @@ public class Platform : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-}
-
-public enum PlatformType
-{
-    normal, weak
 }

@@ -29,11 +29,17 @@ public class CameraFollow : MonoBehaviour
         if(targetPosY + colliderHeight/2 <= camPosY){
             state = States.Falling;
         }
-        else if(state != States.Falling && targetPosY > camPosY){
+        // else if(state != States.Falling && targetPosY > camPosY){
+        //     state  = States.Uping;
+        // }else if(state != States.Falling){
+        //     state = States.Normal;
+        // }
+        else if(targetPosY > camPosY){
             state  = States.Uping;
         }else if(state != States.Falling){
             state = States.Normal;
         }
+
         if(state == States.Uping){
             FollowDoodler(0.3f, 0f);
         }else if(state == States.Falling){

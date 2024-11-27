@@ -30,6 +30,7 @@ public class LevelGenerator : MonoBehaviour
     {
         int basicPlatformAmount = 30;
         int weakPlatformAmount = 15;
+        int movePlatformAmount = 10;
 
         for (int i = 0; i < basicPlatformAmount; i++)
         {
@@ -40,6 +41,12 @@ public class LevelGenerator : MonoBehaviour
         for (int i = 0; i < weakPlatformAmount; i++)
         {
             GameObject platform = Instantiate(platformPrefabs[1], platformPool);
+            platform.SetActive(false);
+        }
+
+        for (int i = 0; i < movePlatformAmount; i++)
+        {
+            GameObject platform = Instantiate(platformPrefabs[2], platformPool);
             platform.SetActive(false);
         }
     }
