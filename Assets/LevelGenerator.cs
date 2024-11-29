@@ -6,11 +6,14 @@ public class LevelGenerator : MonoBehaviour
 {
     public GameObject[] platformPrefabs;
     public GameObject[] propsPrefabs;
+
+    public GameObject[] bulletPrefabs;
     float currentYPos = 0f;
     public float cameraHeight = 5.5f;
 
     public Transform platformPool;
     public Transform propsPool;
+    public Transform bulletPool;
 
     [SerializeField]private const float BOOMSIZE = 0.35f;
 
@@ -18,7 +21,8 @@ public class LevelGenerator : MonoBehaviour
     void Start()
     {
         SpawnPlatformPool();
-        SpawnProps();
+        SpawnPropsPool();
+        SpawnBulletPool();
 
         while(currentYPos < Camera.main.transform.position.y + cameraHeight)
         {
@@ -51,7 +55,7 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
-    private void SpawnProps()
+    private void SpawnPropsPool()
     {
         int boomPropsAmount = 5;
         for (int i = 0; i < boomPropsAmount; i++)
@@ -65,6 +69,23 @@ public class LevelGenerator : MonoBehaviour
             GameObject platform = Instantiate(propsPrefabs[1], propsPool);
             platform.SetActive(false);
         }
+    }
+
+    void SpawnBulletPool(){
+        int bulletPropsAmount = 20;
+        for (int i = 0; i < bulletPropsAmount; i++)
+        {
+            GameObject bullet = Instantiate(bulletPrefabs[0], bulletPool);
+            bullet.SetActive(false);
+        }
+    }
+    public Transform GetBulletSpawn(){
+        for(int i=0;i<bulletPool.childCount;i++){
+            if(!bulletPool.GetChild(i).gameObject.activeInHierarchy){
+                return bulletPool.GetChild(i);
+            }
+        }
+        return null;;
     }
 
     void PickNewPlatform()

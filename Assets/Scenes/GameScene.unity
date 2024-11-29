@@ -1049,9 +1049,12 @@ MonoBehaviour:
   propsPrefabs:
   - {fileID: 9161825169436527364, guid: 239840aa7d4683b4695842b11e0d992b, type: 3}
   - {fileID: 7674484777231878865, guid: f0fbef53cbae6064b8d188ac92724655, type: 3}
+  bulletPrefabs:
+  - {fileID: 8733836232761848945, guid: eddec12d8a3f44b45936296c02200c6b, type: 3}
   cameraHeight: 5.5
   platformPool: {fileID: 906854814}
   propsPool: {fileID: 52535292}
+  bulletPool: {fileID: 935554018}
 --- !u!4 &705964795
 Transform:
   m_ObjectHideFlags: 0
@@ -1209,6 +1212,37 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &935554017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 935554018}
+  m_Layer: 0
+  m_Name: BulletPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &935554018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935554017}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1049839843
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,10 +2279,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  pool: {fileID: 705964794}
   rocketPropsTime: 1
   rocketPropsLeftTime: 1
   rocketPropsForce: 50
   hasRocket: 0
+  bulletPrefab: {fileID: 0}
+  shootSpeed: 100
 --- !u!1 &1779194588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2741,7 +2778,8 @@ SceneRoots:
   - {fileID: 1744012574}
   - {fileID: 1049839844}
   - {fileID: 2051489149808880330}
-  - {fileID: 1775839998}
   - {fileID: 705964795}
   - {fileID: 906854814}
   - {fileID: 52535292}
+  - {fileID: 935554018}
+  - {fileID: 1775839998}

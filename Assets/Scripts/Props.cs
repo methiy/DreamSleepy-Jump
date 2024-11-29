@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum PropsType{
-    Boom,Rocket
+    Boom,Rocket,Shield,ForceBullet,Portal
 }
 public class Props : MonoBehaviour
 {
@@ -30,6 +30,17 @@ public class Props : MonoBehaviour
         }else if(type == PropsType.Rocket){
             rb.GetComponent<Doodler>().SetterRocketState();
             gameObject.SetActive(false);
+        }else if(type == PropsType.Shield){
+            rb.GetComponent<Doodler>().SetterRocketState();
+            gameObject.SetActive(false);
+        }else if(type == PropsType.ForceBullet){
+            rb.GetComponent<Doodler>().SetterBulletDamage();
+            gameObject.SetActive(false);
+        }else if(type == PropsType.Portal){
+            rb.GetComponent<Doodler>().PortalPosition();
+            gameObject.SetActive(false);
+        }else{
+            //todo
         }
     }
 
