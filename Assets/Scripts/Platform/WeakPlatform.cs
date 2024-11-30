@@ -18,6 +18,7 @@ public class WeakPlaPlatformtform : Platform
             {
                 GetComponent<Animator>().SetTrigger("Trigger");
                 //audio
+                
                 Invoke("HideGameObject", 0.4f);
             }
         }

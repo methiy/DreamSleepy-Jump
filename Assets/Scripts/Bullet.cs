@@ -9,6 +9,9 @@ public class Bullet : MonoBehaviour
     private void SetterDamage(float damage){
         this.damage = damage;
     }
+    public float GetterDamage(){
+        return damage;
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
 

@@ -68,6 +68,7 @@ public class Doodler : MonoBehaviour
         Vector3 spawnPosition = transform.position + new Vector3(0, 1, 0); // 确定子弹生成的位置
         GameObject newBullet = pool.GetBulletSpawn().gameObject;
         if(newBullet != null){
+            //shooter audio 
             newBullet.transform.position = spawnPosition;
             newBullet.SetActive(true);
             Rigidbody2D rb = newBullet.GetComponent<Rigidbody2D>();

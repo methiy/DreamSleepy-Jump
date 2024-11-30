@@ -27,12 +27,11 @@ public class Platform : MonoBehaviour
                 if(GetComponent<Animator>() != null)
                 {
                     GetComponent<Animator>().SetTrigger("Trigger");
-                    //audio
-
+                    //weakplatform audio
                     Invoke("HideGameObject", 0.4f);
                 }
             }else{
-                //audio 
+                //otherplatform audio 
                 
             }
         }

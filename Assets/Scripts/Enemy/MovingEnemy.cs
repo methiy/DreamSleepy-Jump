@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovePlatform : Platform
+public class MovingEnemy : BaseEnemy
 {
     public float speed = 1f; // 移动速度
     public float distance = 1f; // 巡逻距离的一半
@@ -32,18 +32,6 @@ public class MovePlatform : Platform
             if (transform.position.x <= startPos.x - distance)
             {
                 movingRight = true; // 改变方向
-            }
-        }
-    }
-
-    private  void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.contacts[0].normal == Vector2.down)
-        {
-            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-            if(rb != null)
-            {
-                rb.velocity = Vector2.up * bounceSpeed;
             }
         }
     }
