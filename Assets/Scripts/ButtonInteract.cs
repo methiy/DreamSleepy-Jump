@@ -20,6 +20,7 @@ public class ButtonInteract : MonoBehaviour
 
     [SerializeField]private AudioSource bgmSource; // 背景音乐来源
     [SerializeField]private AudioSource sfxSource; // 音效来源
+    public GameObject Player;//玩家预制体
 
     private void Start()
     {
@@ -48,7 +49,8 @@ public class ButtonInteract : MonoBehaviour
 
     private void StartGame()
     {
-        SceneManager.LoadScene("GameScene");
+        
+        Player.SetActive(true);
     }
 
     private void PauseGame()
