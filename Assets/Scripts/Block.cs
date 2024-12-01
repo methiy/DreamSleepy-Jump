@@ -8,6 +8,7 @@ public class Block : MonoBehaviour
     public Animator Animator;
     public Animator Nianshou;
     public GameObject Jiesuan;
+    public Animator Score;
     // Start is called before the first frame update
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -20,6 +21,7 @@ public class Block : MonoBehaviour
                 Nianshou.SetTrigger("Fail");
                 Animator.SetBool("Zhengyan",true);
                 Jiesuan.SetActive(true);
+                Score.SetTrigger("Jiesuan");
             }
             else
             {
