@@ -10,9 +10,6 @@ public class Props : MonoBehaviour
     [SerializeField]private PropsType type;
     //Boom
     [SerializeField]private float bounceSpeed = 20;
-    //Rocket
-    [SerializeField]private float forceMagnitude = 20;
-    [SerializeField]private float forceTime = 1.0f;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.contacts[0].normal == Vector2.down)
