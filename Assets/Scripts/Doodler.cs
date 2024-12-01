@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 
 public class Doodler : MonoBehaviour
 {
@@ -58,6 +59,14 @@ public class Doodler : MonoBehaviour
         {
             ShootBullet();
         }
+
+        UpdateScore(Time.deltaTime * 1000);
+    }
+
+    [SerializeField]private Score score;
+
+    private void UpdateScore(float v){
+        score.AddScore(v);
     }
 
     public GameObject bulletPrefab; // 弹丸预制体

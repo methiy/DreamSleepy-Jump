@@ -30,7 +30,7 @@ public class LevelGenerator : MonoBehaviour
         while(currentYPos < Camera.main.transform.position.y + cameraHeight)
         {
             PickNewPlatform();
-            if(Random.Range(0,100) <= 10)  CreateNewEnemy();
+            if(Random.Range(0,1000) <= 10)  CreateNewEnemy();
         }
     }
 
@@ -160,12 +160,21 @@ public class LevelGenerator : MonoBehaviour
         enemyPool.GetChild(r).gameObject.SetActive(true);
 
     }
+
+    [SerializeField]private Score score;
+
+    private void UpdateScore(float v){
+        score.AddScore(v);
+    }
+
     // Update is called once per frame
     void Update()
     {
         if(currentYPos < Camera.main.transform.position.y + cameraHeight)
         {
             PickNewPlatform();
+            UpdateScore(Random.Range(1000,2000));
+            if(Random.Range(0,1000) <= 10)  CreateNewEnemy();
         }
     }
 }
