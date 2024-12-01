@@ -12,6 +12,8 @@ public class ButtonInteract : MonoBehaviour
     [SerializeField] private Button startButton;
     [SerializeField] private Button exitButton;
     [SerializeField] private Button editorButton;
+    [SerializeField] private Button RestartButtion;
+        
 
     public Slider bgmSlider; // 背景音乐滑动条
     public Slider sfxSlider; // 音效滑动条
@@ -30,6 +32,7 @@ public class ButtonInteract : MonoBehaviour
         pauseButton?.onClick.AddListener(PauseGame);
         resumeButton?.onClick.AddListener(ResumeGame);
         editorButton?.onClick.AddListener(ShowEditorPanel);
+        RestartButtion.onClick.AddListener(ReStartGame);
 
         resumeButton?.gameObject.SetActive(false);
         editorMenuPanel?.SetActive(false);
@@ -92,5 +95,10 @@ public class ButtonInteract : MonoBehaviour
     {
         bgmSource.mute = true;
         sfxSource.mute = true;
+    }
+    private void ReStartGame()
+    {
+
+        SceneManager.LoadScene("Gamescene");
     }
 }
