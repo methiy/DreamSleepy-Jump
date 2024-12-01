@@ -26,18 +26,19 @@ public class BaseEnemy : MonoBehaviour
     private void Dead(){
         //dead animator 
         //0.4 is the animation time 
-        Invoke("DestoryGameObject", 0.4f); 
-    }
-
-    private void DestoryGameObject(){
-        Destroy(this.gameObject);
+        Invoke("HideGameObject", 0.4f); 
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.CompareTag("MainCamera"))
         {
-            DestoryGameObject();
+            HideGameObject();
         }
+    }
+
+    void HideGameObject()
+    {
+        gameObject.SetActive(false);
     }
 }

@@ -41,7 +41,7 @@ public class Platform : MonoBehaviour
     {
         if(collision.CompareTag("MainCamera"))
         {
-            gameObject.SetActive(false);
+            HideGameObject();
         }
     }
 
