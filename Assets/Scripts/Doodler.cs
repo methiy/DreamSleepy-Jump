@@ -60,7 +60,7 @@ public class Doodler : MonoBehaviour
             ShootBullet();
         }
 
-        UpdateScore(Time.deltaTime * 1000);
+        // UpdateScore(Time.deltaTime * 1000);
     }
 
     [SerializeField]private Score score;
